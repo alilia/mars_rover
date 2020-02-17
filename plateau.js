@@ -5,8 +5,8 @@ class Plateau {
 		this._height = parseInt(size[1])
 	}
 
-	isValidLocation(x, y) {
-		return x <= this._width && y <= this._height
+	isValidLocation(coord) {
+		return coord[0] <= this._width && coord[1] <= this._height
 	}
 }
 

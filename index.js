@@ -1,6 +1,7 @@
 'use strict'
 const assert = require('assert')
 const Plateau = require('./plateau')
+const Rover = require('./rover')
 
 class Magic {
 	constructor(input) {
@@ -29,10 +30,7 @@ class Magic {
 		var rovers = []
 
 		for (var i = 0; i < input.length / 2; i ++) {
-			// TODO new Rover
-			console.log(input[i * 2].split(' '))
-			console.log(input[i * 2 + 1].split(''))
-			rovers.push([])
+			rovers.push(new Rover(input[i * 2].split(' '), input[i * 2 + 1].split('')))
 		}
 
 		return rovers
@@ -40,16 +38,17 @@ class Magic {
 
 	moveRovers() {
 		this._rovers.forEach(rover => {
-			// rover.move()
+			while(rover.move() && this._plateau.isValidLocation(rover.currentPos)) {}
 		})
 	}
 
 	get currentState() {
 		this._rovers.forEach(rover => {
-			// rover.currentPosition()
+			console.log(rover.currentPos)
 		})
 	}
 }
+
 
 const testData = `5 5
 1 2 N
