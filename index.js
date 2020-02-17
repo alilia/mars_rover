@@ -1,5 +1,6 @@
 'use strict'
 const assert = require('assert')
+const Plateau = require('./plateau')
 
 class Magic {
 	constructor(input) {
@@ -12,7 +13,7 @@ class Magic {
 		var parsedInput = this._rawInput.split('\n')
 		assert(parsedInput.length % 2 != 0, "Some data is missing from the input")
 
-		this._plateau = this.getPlateauCoordinates(parsedInput)
+		this._plateau = new Plateau(this.getPlateauCoordinates(parsedInput))
 		this._rovers = this.getRovers(parsedInput)
 	}
 
