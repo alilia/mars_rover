@@ -9,6 +9,7 @@ describe("Rover", () => {
 
 describe("Plateau", () => {
 	it.skip("should be able to init", () => {})
+	it.skip("shoudl have only one rover on a coordinate", () => {})
 })
 
 describe("Application", () => {
