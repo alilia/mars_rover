@@ -1,6 +1,15 @@
+'use strict'
 const assert = require('assert')
 
+/**
+ * Rover object.
+ */
 class Rover {
+	/**
+	 * Inits a rover objects, sets default values and parameters.
+	 * @param {Array} init - An array of default position (x, y, direction)
+	 * @param {Array} moves - An array of moves (possible values: L, R, M)
+	 */
 	constructor(init, moves) {
 		this._possibleDirs = [
 			'N', [0, 1],
@@ -21,6 +30,10 @@ class Rover {
 		this._leftMoves = moves
 	}
 
+	/**
+	 * Executes 'steps' amount of next moves.
+	 * @param {Number} steps 
+	 */
 	move(steps) {
 		if (steps == null) steps = 1
 		var robotMoved = false
@@ -57,6 +70,10 @@ class Rover {
 		return robotMoved
 	}
 
+	/**
+	 * Tells current position of rover.
+	 * @returns {Array} - A three-long Array, containing x, y and dir of the rover
+	 */
 	get currentPos() {
 		return [this._currentPosX, this._currentPosY, this._possibleDirs[this._currentDir * 2]]
 	}
