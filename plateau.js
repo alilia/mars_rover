@@ -39,7 +39,7 @@ class Plateau {
 	/**
 	 * Tells, whether a coordinate is on the plateau.
 	 * @param {Array} coord - A two-long Array.
-	 * @returns {Bool} - Is it or not.
+	 * @returns {Boolean} - Is it or not.
 	 */
 	isValidLocation(coord) {
 		return coord[0] <= this._width && coord[1] <= this._height
