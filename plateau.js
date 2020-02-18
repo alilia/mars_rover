@@ -1,4 +1,5 @@
 'use strict'
+const assert = require('assert')
 
 /**
  * Plateau object.
@@ -9,9 +10,28 @@ class Plateau {
 	 * @param {Array} size - A two-long Array, containing upper-right coordinates of the plateau.
 	 */
 	constructor(size) {
-		// TODO validator
-		this._width = parseInt(size[0])
-		this._height = parseInt(size[1])
+		this._plateauWidth = size[0]
+		this._plateauHeigth = size[1]
+	}
+
+	/**
+	 * Validates and sets plateau's width.
+	 */
+	set _plateauWidth(width) {
+		width = parseInt(width)
+		assert(width > 0, 'Invalid plateau width.')
+
+		this._width = (width)
+	}
+
+	/**
+	 * Validates and sets plateau's height.
+	 */
+	set _plateauHeigth(height) {
+		height = parseInt(height)
+		assert(height > 0, 'Invalid plateau height.')
+
+		this._height = parseInt(height)
 	}
 
 	/**
