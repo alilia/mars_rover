@@ -76,9 +76,13 @@ class Magic {
 	 * @returns {*} - TODO
 	 */
 	get currentState() {
+		var currentState = []
+
 		this._rovers.forEach(rover => {
-			console.log(rover.currentPos)
+			currentState.push(rover.currentPos.join(' '))
 		})
+
+		return currentState.join('\n')
 	}
 }
 
