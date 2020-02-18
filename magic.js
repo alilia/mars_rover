@@ -61,8 +61,13 @@ class Magic {
 	 */
 	moveRovers() {
 		this._rovers.forEach(rover => {
-			while(rover.move() && this._plateau.isValidLocation(rover.currentPos)) {}
-			// TODO terminate rovers
+			var isMovePerformed = true
+			var isRoverOnPlateau = true
+
+			while(isMovePerformed && isRoverOnPlateau) {
+				isMovePerformed = rover.move()
+				isRoverOnPlateau = this._plateau.isValidLocation(rover.currentPos)
+			}
 		})
 	}
 
@@ -77,11 +82,4 @@ class Magic {
 	}
 }
 
-const testData = `5 5
-1 2 N
-LMLMLMLMM
-3 3 E
-MMRMMRMRRM`
-
-const app = new Magic(testData)
-console.log(app.currentState)
+module.exports = Magic

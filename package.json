@@ -2,7 +2,7 @@
   "name": "mars_rover",
   "version": "0.0.1",
   "description": "Mars rover homework",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "mocha *.test.js"
   },
