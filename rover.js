@@ -26,6 +26,7 @@ class Rover {
 
 	/**
 	 * Validates and sets current X position of rover.
+	 * @param {Number} x - Rover's X position
 	 */
 	set _posX(x) {
 		x = parseInt(x)
@@ -36,6 +37,7 @@ class Rover {
 
 	/**
 	 * Validates and sets current Y position of rover.
+	 * @param {Number} x - Rover's Y position
 	 */
 	set _posY(y) {
 		y = parseInt(y)
@@ -46,6 +48,7 @@ class Rover {
 
 	/**
 	 * Validates and sets current heading of rover.
+	 * @param {String} x - Rover's direction
 	 */
 	set _dir(dir) {
 		var dirSet = false
@@ -62,6 +65,7 @@ class Rover {
 
 	/**
 	 * Validates and sets left moves for rover.
+	 * @param {Array} moves - An array of to-be-executed moves
 	 */
 	set _moves(moves) {
 		// TODO normalize input
@@ -73,7 +77,8 @@ class Rover {
 
 	/**
 	 * Executes 'steps' amount of next moves.
-	 * @param {Number} steps 
+	 * @param {Number} steps - Number of to-be-executed steps (default: 1)
+	 * @returns {Boolean} - Whether robot performed a move
 	 */
 	move(steps) {
 		if (steps == null) steps = 1

@@ -626,8 +626,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>width</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>width</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Plateau's width
+
           </div>
           
         </div>
@@ -686,8 +687,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>height</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>height</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Plateau's height
+
           </div>
           
         </div>
@@ -892,8 +894,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>x</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Rover's X position
+
           </div>
           
         </div>
@@ -958,6 +961,15 @@
           
         </div>
       
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
+	    Rover's Y position
+
+          </div>
+          
+        </div>
+      
     </div>
   
 
@@ -1018,6 +1030,15 @@
           
         </div>
       
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    Rover's direction
+
+          </div>
+          
+        </div>
+      
     </div>
   
 
@@ -1072,8 +1093,9 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>moves</span> <code class='quiet'>(any)</code>
-	    
+            <span class='code bold'>moves</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    An array of to-be-executed moves
+
           </div>
           
         </div>
@@ -1115,7 +1137,7 @@
 
   <p>Executes 'steps' amount of next moves.</p>
 
-    <div class='pre p1 fill-light mt0'>move(steps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</div>
+    <div class='pre p1 fill-light mt0'>move(steps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></div>
   
   
 
@@ -1133,7 +1155,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>steps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a>)</code>
-	    
+	    Number of to-be-executed steps (default: 1)
+
           </div>
           
         </div>
@@ -1143,6 +1166,14 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code>:
+        Whether robot performed a move
+
+      
+    
   
 
   

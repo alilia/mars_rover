@@ -16,6 +16,7 @@ class Plateau {
 
 	/**
 	 * Validates and sets plateau's width.
+	 * @param {Number} width - Plateau's width
 	 */
 	set _plateauWidth(width) {
 		width = parseInt(width)
@@ -26,6 +27,7 @@ class Plateau {
 
 	/**
 	 * Validates and sets plateau's height.
+	 * @param {Number} height - Plateau's height
 	 */
 	set _plateauHeigth(height) {
 		height = parseInt(height)
